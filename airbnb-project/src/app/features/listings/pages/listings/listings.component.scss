@@ -1,0 +1,21 @@
+.listings {
+  padding: 2rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+}
