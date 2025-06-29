@@ -1,10 +1,21 @@
 <section class="auth">
   <h2>Inicia Sesión</h2>
-  <form>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label>Email</label>
-    <input type="email" placeholder="correo@ejemplo.com" />
+    <input type="email" formControlName="email" placeholder="correo@ejemplo.com" />
+    <div *ngIf="email?.invalid && (email?.touched || email?.dirty)" class="error">
+      <small *ngIf="email?.errors?.['required']">El email es obligatorio.</small>
+      <small *ngIf="email?.errors?.['email']">Formato inválido.</small>
+    </div>
+
     <label>Contraseña</label>
-    <input type="password" placeholder="********" />
-    <button type="submit">Ingresar</button>
+    <input type="password" formControlName="password" placeholder="********" />
+    <div *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="error">
+      <small *ngIf="password?.errors?.['required']">La contraseña es obligatoria.</small>
+      <small *ngIf="password?.errors?.['minlength']">Mínimo 6 caracteres.</small>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
   </form>
 </section>
