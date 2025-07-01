@@ -1,1 +1,18 @@
+<header class="header">
+  <div class="container">
+    <h2 class="logo">Airbnb Project 🏠</h2>
+    <nav class="nav">
+      <ul>
+        <li (click)="navigateToHome()"><a>Inicio</a></li>
+        <li (click)="navigateToReservations()"><a>Alojamientos</a></li>
+        <li (click)="navigateToContact()"><a>Contacto</a></li>
+        <li (click)="navigateToLogin()"><a>Login</a></li>
+        <li (click)="navigateToRegister()"><a>Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 <router-outlet />
+<footer class="footer">
+  <p>&copy; 2025 Airbnb Project. Todos los derechos reservados.</p>
+</footer>
