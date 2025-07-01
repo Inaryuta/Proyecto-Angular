@@ -25,14 +25,14 @@ export class AppComponent {
   }
 
   navigateToRegister(){
-    this.router.navigate([['/register']])
+    this.router.navigate(['/register'])
   }
 
   navigateToContact(){
-    this.router.navigate([['/contact']])
+    this.router.navigate(['/contact'])
   }
 
   navigateToReservations(){
-    this.router.navigate([['/reservations']])
+    this.router.navigate(['/listings'])
   }
 }
